@@ -10,7 +10,8 @@ bnchmrk <- microbenchmark::microbenchmark(
   base = read.csv("input/covid_small.csv", stringsAsFactors = FALSE),
   tidy = read_csv("input/covid_small.csv"),
   dt   = fread("input/covid_small.csv"),
-  arw  = read_csv_arrow("input/covid_small.csv")
+  arw  = read_csv_arrow("input/covid_small.csv"),
+  times = 20
 )
 
 # Plot results
